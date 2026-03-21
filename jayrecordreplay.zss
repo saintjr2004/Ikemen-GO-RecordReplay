@@ -88,7 +88,7 @@ ignoreHitPause {
 				helper{
 					name: "Recorder";
 					id: 1324300 + $i;
-					stateno: 32132100;
+					stateno: 1324300;
 					pos: 32767,32767;
 					postype: P1;
 					facing: facing;
@@ -114,9 +114,10 @@ ignoreHitPause {
 				}
 				if (!isHelper) {
 					text{
-						text: "Recording..."; 
+						text: "Recording... %v"; 
 						pos: const240p(map(jayrecordreplay_textPosX) + (map(jayrecordreplay_textOff169X) * $isWide)) * $wide,const240p(map(jayrecordreplay_textPosY) + (map(jayrecordreplay_textOff169Y) * $isWide)) * $wide;  
 						font: map(jayrecordreplay_textFont);
+						params: floor((2500 - map(jayrecordreplay_timer)) * 0.01) + 1;
 						bank: map(jayrecordreplay_textBank);
 						layerno: map(jayrecordreplay_textLayer);
 						scale: map(jayrecordreplay_textScale), map(jayrecordreplay_textScale);
@@ -228,7 +229,7 @@ ignoreHitPause {
 # ==================================
 		
 # Main state
-[StateDef 32132100; anim: -2; ctrl: 0;]
+[StateDef 1324300; anim: -2; ctrl: 0;]
 
 ignoreHitPause {
 	let slotId = 1324300 + (parent, map(jayrecordreplay_recSl) - 1);
