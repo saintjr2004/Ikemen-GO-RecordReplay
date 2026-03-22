@@ -53,7 +53,7 @@ You can of course edit the module directly with your own `fx.def` file to add vi
 ## Controls
 
 You can either use the pause menu to use record/replay options or you can use the tag buttons.
-The "W" button is for recording. The "D" button is used for replaying. Pressing both tag buttons will change your recording slot.
+The "W" button is for recording. The "D" button is used for replaying. You can only change recording slots in the pause menu.
 
 It should be noted that player 2 has no control over this, the controls to activate record and replay are strictly for player 1 as
 this is a training mode module.
