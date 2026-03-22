@@ -56,13 +56,7 @@ ignoreHitPause {
 		
 		# Inputs
 		if (playerNo = 1 && teamMode != Tag) {
-			if (command = "TagShiftBack" && command = "TagShiftFwd") {
-				if (map(jayrecordreplay_recSl) = map(jayrecordreplay_slots)) {
-					map(jayrecordreplay_recSl) := 1;
-				} else {
-					map(jayrecordreplay_recSl) := map(jayrecordreplay_recSl) + 1;
-				}
-			} else if (command = "TagShiftBack" && !map(jayrecordreplay_recCd)) {
+			if (command = "TagShiftBack" && !map(jayrecordreplay_recCd)) {
 				map(jayrecordreplay_recCd) := 3;
 				if (map(jayrecordreplay_recSt) != 1) {
 					map(jayrecordreplay_recSt) := 1;
