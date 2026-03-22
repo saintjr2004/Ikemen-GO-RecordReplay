@@ -5,8 +5,7 @@ that sequence played back for you.
 
 ## Installation
 
-Extract `jayrecordreplay.zss` directly into the folder you wish to store it in. It's recommended
-you place it in the `data` folder or whatever folder you contain the `.zss` modules in.
+Extract the `jayrecordreplay` folder directly into `external/mods`.
 
 You will need to make edits to your current IKEMEN config.ini file to "enable" the module.
 
@@ -50,3 +49,11 @@ map(jayrecordreplay_textB) := 0;			# Green color for text
 # ==================================
 ```
 You can of course edit the module directly with your own `fx.def` file to add visuals.
+
+## Controls
+
+You can either use the pause menu to use record/replay options or you can use the tag buttons.
+The "W" button is for recording. The "D" button is used for replaying. Pressing both tag buttons will change your recording slot.
+
+It should be noted that player 2 has no control over this, the controls to activate record and replay are strictly for player 1 as
+this is a training mode module.

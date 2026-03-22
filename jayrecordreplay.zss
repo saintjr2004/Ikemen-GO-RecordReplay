@@ -9,7 +9,7 @@
 # ==================================
 
 map(jayrecordreplay_enable) := 1;			# Enable record/replay (0 = off, 1 = on)
-map(jayrecordreplay_slotsMax) := 3;			# Amount of recording slots available (max: 100)
+map(jayrecordreplay_slotsMax) := 3;			# Amount of recording slots available (max: 50)
 map(jayrecordreplay_absolute) := 0;			# Replayed left/right inputs won't flip based on facing if enabled
 
 map(jayrecordreplay_textPosX) := 160;		# Pos X for the info text
@@ -38,7 +38,7 @@ ignoreHitPause {
 	let isWide = (screenWidth / screenHeight != 1.33333333);
 	
 	# Main logic
-	if (roundState = 2 && map(jayrecordreplay_enable) = 1 && teamMode = single && gameMode = "training") {
+	if (roundState = 2 && map(jayrecordreplay_enable) = 1 && gameMode = "training") {
 		# Neutral logic
 		if (playerNo = 1 && !isHelper && map(jayrecordreplay_recSt) = 0) {
 			text{
@@ -55,7 +55,7 @@ ignoreHitPause {
 		}
 		
 		# Inputs
-		if (playerNo = 1) {
+		if (playerNo = 1 && teamMode != Tag) {
 			if (command = "TagShiftBack" && command = "TagShiftFwd") {
 				if (map(jayrecordreplay_recSl) = map(jayrecordreplay_slots)) {
 					map(jayrecordreplay_recSl) := 1;
@@ -82,7 +82,7 @@ ignoreHitPause {
 		if map(jayrecordreplay_recCd) > 0 { map(jayrecordreplay_recCd) := map(jayrecordreplay_recCd) - 1; }
 		
 		# Helper
-		map(jayrecordreplay_slots) := clamp(map(jayrecordreplay_slotsMax),1,100);
+		map(jayrecordreplay_slots) := clamp(map(jayrecordreplay_slotsMax),1,50);
 		for i = 0; map(jayrecordreplay_slots) - 1 {
 			if (playerNo = 1 && !numHelper(1324300 + $i)) {
 				helper{
