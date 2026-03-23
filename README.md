@@ -11,12 +11,12 @@ You will need to make edits to your current IKEMEN config.ini file to "enable" t
 
 Under `[Common]`, add `jayrecordreplay.zss` to your `States` files.
 
-Example with the files stored in `external/mods`:
+Example with the files stored in `external/mods/jayrecordreplay`:
 
 ```
 [Common]
 ...
-States  = data/functions.zss, data/action.zss, data/dizzy.zss, data/guardbreak.zss, data/score.zss, data/system.zss, data/tag.zss, data/training.zss, external/mods/jayrecordreplay.zss
+States  = data/functions.zss, data/action.zss, data/dizzy.zss, data/guardbreak.zss, data/score.zss, data/system.zss, data/tag.zss, data/training.zss, external/mods/jayrecordreplay/jayrecordreplay.zss
 ```
 
 ## Configuration
