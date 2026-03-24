@@ -40,7 +40,7 @@ ignoreHitPause {
 	# Main logic
 	if (roundState = 2 && map(jayrecordreplay_enable) = 1 && gameMode = "training") {
 		# Neutral logic
-		if (playerNo = 1 && !isHelper && map(jayrecordreplay_recSt) = 0) {
+		if (playerNo = 1 && !isHelper && map(jayrecordreplay_recSt) = 0 && debugMode(lifeBarHide)) {
 			text{
 				text: "Record Slot: %v"; 
 				pos: const240p(map(jayrecordreplay_textPosX) + (map(jayrecordreplay_textOff169X) * $isWide)) * $wide, const240p(map(jayrecordreplay_textPosY) + (map(jayrecordreplay_textOff169Y) * $isWide)) * $wide; 
@@ -106,7 +106,7 @@ ignoreHitPause {
 					flag6: NoCrouch;
 					flag7: NoWalk;
 				}
-				if (!isHelper) {
+				if (!isHelper && debugMode(lifeBarHide)) {
 					text{
 						text: "Recording... %v"; 
 						pos: const240p(map(jayrecordreplay_textPosX) + (map(jayrecordreplay_textOff169X) * $isWide)) * $wide,const240p(map(jayrecordreplay_textPosY) + (map(jayrecordreplay_textOff169Y) * $isWide)) * $wide;  
@@ -180,7 +180,7 @@ ignoreHitPause {
 				
 				map(jayrecordreplay_iter) := map(jayrecordreplay_iter) + 1;
 				
-				if (!isHelper) {
+				if (!isHelper && debugMode(lifeBarHide)) {
 					text{
 						text: "Replaying"; 
 						pos: const240p(map(jayrecordreplay_textPosX) + (map(jayrecordreplay_textOff169X) * $isWide)) * $wide,const240p(map(jayrecordreplay_textPosY) + (map(jayrecordreplay_textOff169Y) * $isWide)) * $wide;  
